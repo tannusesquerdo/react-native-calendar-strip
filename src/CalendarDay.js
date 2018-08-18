@@ -150,6 +150,17 @@ class CalendarDay extends Component {
             borderWidth: this.props.daySelectionAnimation.borderWidth
           });
           break;
+        case "dot":
+          dateViewStyle.push({
+            position: 'absolute',
+            width: '4px',
+            height: '4px',
+            bottom: '38px',
+            left: '50%',
+            marginLeft: '-2px',
+            background: '#c6342e',
+            borderRadius: '100%'
+          })
         default:
           // No animation styling by default
           break;
