@@ -12,7 +12,7 @@ export default StyleSheet.create({
   datesStrip: {
     flexDirection: "row",
     flex: 1,
-    justifyContent: "space-between"
+    justifyContent: "center"
   },
   calendarDates: {
     flex: 1,
@@ -23,7 +23,9 @@ export default StyleSheet.create({
   calendarHeader: {
     textAlign: "center",
     fontWeight: "bold",
-    alignSelf: "center"
+    alignSelf: "center",
+    minWidth: 120,
+    marginVertical: 10,
   },
   iconContainer: {
     justifyContent: "center",
@@ -48,7 +50,7 @@ export default StyleSheet.create({
     textAlign: "center"
   },
   dateNumber: {
-    fontWeight: "bold",
+    fontWeight: "normal",
     textAlign: "center"
   },
   weekendDateNumber: {

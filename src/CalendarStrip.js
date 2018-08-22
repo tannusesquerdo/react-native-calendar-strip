@@ -503,7 +503,7 @@ class CalendarStrip extends Component {
       dayComponentWidth,
       this.props.minDayComponentSize
     );
-    let monthFontSize = Math.round(dayComponentWidth / 3.2);
+    let monthFontSize = Math.round(dayComponentWidth / 2.5);
     let selectorSize = Math.round(dayComponentWidth / 2.5);
     let height = this.props.showMonth ? monthFontSize : 0;
     height += this.props.showDate ? dayComponentWidth : 0; // assume square element sizes
@@ -587,7 +587,6 @@ class CalendarStrip extends Component {
           style={[this.props.innerStyle, { height: this.state.height }]}
           onLayout={this.onLayout.bind(this)}
         >
-          {this.props.showDate && calendarHeader}
           <View style={styles.datesStrip}>
             <WeekSelector
               controlDate={this.props.minDate}
@@ -604,11 +603,7 @@ class CalendarStrip extends Component {
               size={this.state.selectorSize}
             />
 
-            {this.props.showDate ? (
-              <View style={styles.calendarDates}>{datesRender}</View>
-            ) : (
-              calendarHeader
-            )}
+            { calendarHeader }
 
             <WeekSelector
               controlDate={this.props.maxDate}
@@ -624,6 +619,9 @@ class CalendarStrip extends Component {
               weekStartDate={this.state.datesForWeek[0]}
               size={this.state.selectorSize}
             />
+          </View>
+          <View style={styles.datesStrip}>
+            <View style={styles.calendarDates}>{datesRender}</View>
           </View>
         </View>
       </View>

@@ -229,6 +229,9 @@ class CalendarDay extends Component {
               {this.props.date.date()}
             </Text>
           )}
+          {this.state.selected && (
+            <Text style={{position: 'absolute', bottom: 5, width: 6, height: 6, backgroundColor: '#525252', borderRadius: 100}}></Text>
+          )}
         </View>
       </TouchableOpacity>
     );
